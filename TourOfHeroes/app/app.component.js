@@ -18,11 +18,16 @@ System.register(['angular2/core'], function(exports_1) {
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
+                    this.title = "Tour of Heroes";
+                    this.hero = {
+                        id: 1,
+                        name: "WindStorm"
+                    };
                 }
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: '<h1>My second Angular 2 App with beta6</h1> <h2>Tour of Hero</h2>'
+                        template: '<h1>{{title}}</h1><h2>{{hero.name}} details!</h2><div><label>id: </label>{{hero.id}}</div><div><label>name: </label>{{hero.name}}</div>'
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
